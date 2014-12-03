@@ -37,7 +37,7 @@
 .szu-p1 {
     width: 257px;
     height: 126px;
-    background-image: url('../../img/p1.png');
+    /*background-image: url('../../img/p1.png');*/
     background-position: 0px 0px;
     background-repeat: no-repeat;
     animation: animatedBackground 1s linear;
