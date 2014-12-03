@@ -1,50 +1,135 @@
-.szu-p1 {
-    width: 257px;
-    height: 126px;
-    background-image: url('../../img/p1.png');
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    animation: animatedBackground 1s linear;
-    -moz-animation:animatedBackground 1s linear; /* Firefox */
-    -webkit-animation:animatedBackground 1s linear; /* Safari and Chrome */
-    -o-animation:animatedBackground 1s linear; /* Opera */
+
+
+.szu-img-p1{
+    /*-webkit-transform: rotate(30deg);*/
+    animation:animatedBackground  1s linear;
+    -moz-animation: animatedBackground 1s linear;
+    -webkit-animation: animatedBackground 0.3s linear;
+    -o-animation: animatedBackground 1s linear;
 }
+
+.szu-img-p1-2{
+    /*-webkit-transform: rotate(30deg);*/
+
+    animation:animatedBackground  0.3s linear;
+    -moz-animation: animatedBackground 0.5s linear;
+    -webkit-animation: animatedBackground 0.3s linear;
+    -o-animation: animatedBackground 1s linear;
+
+}
+
+.szu-title-p1{
+    /*-webkit-transform: rotate(30deg);*/
+    animation:animatedBackground  0.3s linear;
+    -moz-animation: animatedBackground 0.5s linear;
+    -webkit-animation: animatedBackground 0.3s linear;
+    -o-animation: animatedBackground 1s linear;
+}
+
+
+.szu-bg-p1{
+    /*-webkit-transform: rotate(30deg);*/
+    animation:bgmove  1s linear;
+    -moz-animation: bgmove  1s  linear infinite alternate ;
+    -webkit-animation: bgmove  1s linear infinite alternate;
+    -o-animation: bgmove  1s linear infinite alternate;
+}
+
+.szu-bg-p1{
+    /*-webkit-transform: rotate(30deg);*/
+    animation:bgmove  1s linear;
+    -moz-animation: bgmove  1s  linear infinite alternate ;
+    -webkit-animation: bgmove  1s linear infinite alternate;
+    -o-animation: bgmove  1s linear infinite alternate;
+}
+
+
 
 
 @keyframes animatedBackground {
+
     from {
-        background-size: 0 0;
+        transform: scale(0,0);
     }
     to {
-        background-size: 100% 100%;
+        transform: scale(1,1);
     }
 }
 
+
+
 @-moz-keyframes animatedBackground {
     from {
-        background-size: 0 0;
+        -moz-transform: scale(0,0);
     }
     to {
-        background-size: 100% 100%;
+        -moz-transform: scale(1,1);
     }
 }
 
 @-o-keyframes animatedBackground {
     from {
-        background-size: 0 0;
+        -o-transform: scale(0,0);
     }
     to {
-        background-size: 100% 100%;
+        -o-transform: scale(1,1);
     }
 }
+
 
 @-webkit-keyframes animatedBackground {
     from {
-        background-size: 0 0;
+        -webkit-transform: scale(0,0);
+
     }
     to {
-        background-size: 100% 100%;
+        -webkit-transform: scale(1,1);
+
     }
 }
 
 
+/*背景移动*/
+
+@keyframes bgmove {
+
+    from {
+        transform:translate(0px,0px);
+    }
+    to {
+        transform:translate(-50px,0px);
+    }
+}
+
+
+
+@-moz-keyframes bgmove {
+    from {
+        -moz-transform:translate(0px,0px);
+    }
+    to {
+        -moz-transform: translate(-50px,0px);
+    }
+}
+
+@-o-keyframes bgmove {
+    from {
+        -o-transform: translate(0px,0px);
+    }
+    to {
+        -o-transform: translate(-50px,0px);
+    }
+}
+
+
+@-webkit-keyframes bgmove {
+    from {
+        -webkit-transform: translate(0px,0px);
+
+    }
+    to {
+        -webkit-transform: translate(-50px,0px);
+    }
+
+
+}
