@@ -1,13 +1,44 @@
 @keyframes animatedBackground {
-    from { background-size: 0 0; }
-    to { background-size: 100% 100%; }
+    from {
+        background-size: 0 0;
+    }
+    to {
+        background-size: 100% 100%;
+    }
 }
 
-.szu-p1{
+@-moz-keyframes animatedBackground {
+    from {
+        background-size: 0 0;
+    }
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+@-o-keyframes animatedBackground {
+    from {
+        background-size: 0 0;
+    }
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes animatedBackground {
+    from {
+        background-size: 0 0;
+    }
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+.szu-p1 {
     width: 257px;
     height: 126px;
     background-image: url('../../img/p1.png');
     background-position: 0px 0px;
     background-repeat: no-repeat;
-    animation: animatedBackground 1s linear ;
+    animation: animatedBackground 1s linear;
 }
