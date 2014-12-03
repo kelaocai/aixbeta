@@ -13,13 +13,13 @@
 
     <title><?php echo $this->page_title; ?></title>
 </head>
-<body >
+<body style="margin: 0px;" >
 
 
 <div class="swiper-container" style="width: 100%; background-color: #3D3E40;">
-    <div class="swiper-wrapper" >
+    <div class="swiper-wrapper"  style="text-align: center;padding-top: 10px;">
         <!--First Slide-->
-        <div class="swiper-slide" style="text-align: center;padding-top: 10px;">
+        <div class="swiper-slide" >
             <img src="<?php echo G_STATIC_URL; ?>/img/p1-01.png" style="z-index: 1;" >
             <img src="<?php echo G_STATIC_URL; ?>/img/p1-02.png" class="szu-bg-p1" style="margin-left: 50px;">
 
@@ -29,7 +29,7 @@
         <!--Second Slide-->
         <div class="swiper-slide">
             <img src="<?php echo G_STATIC_URL; ?>/img/p1-03.png" >
-            <p style="padding: 10px; color: #fff;">同一件商品，有超过1000家商铺在同时销售，点点折召集了其中的一部分商户，他们愿意拿出一部分利润奖励给到他们店消费的用户</p>
+            <p style="padding: 10px; color: #fff;">同一件商品，大约有超过1000家商铺在同时销售，于是我们召集了其中的一部分商户，他们愿意拿出一部分利润奖励给到他们店消费的用户</p>
         </div>
 
         <!--Third Slide-->
@@ -46,7 +46,7 @@
 
     $(document).ready(function () {
 
-        $('.swiper-container').height(document.documentElement.clientHeight-16);
+        $('.swiper-container').height(document.documentElement.clientHeight);
 
         var mySwiper = $('.swiper-container').swiper({
             //Your options here:
