@@ -41,4 +41,8 @@
     background-position: 0px 0px;
     background-repeat: no-repeat;
     animation: animatedBackground 1s linear;
+    -moz-animation:animatedBackground 1s linear; /* Firefox */
+    -webkit-animation:animatedBackground 1s linear; /* Safari and Chrome */
+    -o-animation:animatedBackground 1s linear; /* Opera */
 }
+
