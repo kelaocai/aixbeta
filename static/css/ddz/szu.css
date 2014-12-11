@@ -133,3 +133,15 @@
 
 
 }
+
+.ddz_2{
+    float: left;
+    margin: 0px auto;
+    margin-left: 50px;
+}
+
+.ddz_2 p{
+   padding: 0px;
+   margin: 0px;
+   line-height: 24px;
+}

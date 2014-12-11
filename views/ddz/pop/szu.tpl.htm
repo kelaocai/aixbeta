@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="robots" content="noarchive"/>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
     <meta name="description" content="<?php echo $this->_meta_description; ?>"/>
     <link rel="stylesheet" href="<?php echo G_STATIC_URL; ?>/css/idangerous.swiper.css">
     <link rel="stylesheet" href="<?php echo G_STATIC_URL; ?>/css/ddz/szu.css">
@@ -13,47 +13,50 @@
 
     <title><?php echo $this->page_title; ?></title>
 </head>
-<body style="margin: 0px;" >
+<body style="margin: 0px;">
 
 
-<div class="swiper-container" style="width: 100%; background-color: #3D3E40;">
-    <div class="swiper-wrapper"  style="text-align: center;padding-top: 10px;">
+<div class="swiper-container" style="width: 100%; font-family:'Microsoft YaHei','STHeiti', Helvetica, Arial, sans-serif;">
+    <div class="swiper-wrapper" style="text-align: left;background-color: #3D3E40;">
         <!--First Slide-->
-        <div class="swiper-slide" >
-            <img src="<?php echo G_STATIC_URL; ?>/img/p1-01.png" style="z-index: 1;" >
-            <img src="<?php echo G_STATIC_URL; ?>/img/p1-02.png" class="szu-bg-p1" style="margin-left: 50px;">
+        <div class="swiper-slide">
 
-            <h2 style="color: #ffffff; font:'stheiti'; font-size: 36px" class="szu-title-p1">购物就能赚钱</h2>
+            <script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz/20141211010540/loader.js"
+                    id="Mugeda_5481e565a3664eb605000116"></script>
+
         </div>
 
         <!--Second Slide-->
-        <div class="swiper-slide">
-            <img src="<?php echo G_STATIC_URL; ?>/img/p1-03.png" >
-            <p style="padding: 10px; color: #fff;">同一件商品，大约有超过1000家商铺在同时销售，于是我们召集了其中的一部分商户，他们愿意拿出一部分利润奖励给到他们店消费的用户</p>
+        <div class="swiper-slide" style="background-color:#FFC700; color:#fff;">
+
+            <img src="<?php echo G_STATIC_URL; ?>/img/mai.png" class="img img-response"
+                 style="margin-top: 20px;width: 100%;max-width: 480px;">
+            <div class="ddz_2">
+                <h1>返利三步</h1>
+                <p>1.点点折搜索商品</p>
+                <p>2.跳转淘宝购买</p>
+                <p>3.确认收货拿返利</p>
+            </div>
+
         </div>
 
         <!--Third Slide-->
         <div class="swiper-slide">
-            <script>
-                var _mrmcp = {
-                    "redirect_url": "%LINK%?redir=",
-                    "impression_pixel": "%TRACKURL%",
-                    "destination_url": "%DESTURL%",
-                    "custom_params":"%CUSTOMPARAM%",
-                    "common_path":"",
-                    "description":"",
-                    "thumb":"",
-                    "render_mode":"normal"
-                };
-            </script>
-            <script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/demo/20141204053211/loader.js" id="Mugeda_548026a2a3664ee005000005"></script>
+            3
+            <!--<script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz-p2/20141211010935/loader.js" id="Mugeda_5487c377a3664ee105000522"></script>-->
         </div>
+
+        <div class="swiper-slide">
+            4
+            <!--<script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz-pg4/20141211011016/loader.js" id="Mugeda_54886102a3664ebc0500060c"></script>-->
+        </div>
+
+
         <!--Etc..-->
     </div>
 </div>
 
 <script type="text/javascript">
-
 
 
     $(document).ready(function () {
@@ -62,10 +65,21 @@
 
         var mySwiper = $('.swiper-container').swiper({
             //Your options here:
-            mode:'vertical',
+            mode: 'vertical',
             loop: true
             //etc..
         });
+
+        var _mrmcp = {
+            "redirect_url": "%LINK%?redir=",
+            "impression_pixel": "%TRACKURL%",
+            "destination_url": "%DESTURL%",
+            "custom_params": "%CUSTOMPARAM%",
+            "common_path": "",
+            "description": "",
+            "thumb": "",
+            "render_mode": "normal"
+        };
 
 //        alert(window.screen.height);
 
