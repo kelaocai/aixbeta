@@ -134,14 +134,20 @@
 
 }
 
-.ddz_2{
-    margin: 0px auto;
-    /*margin-left: 50px;*/
-    /*position: absolute;*/
+.ddz-txt{
+
+    margin: 36px 30px;
+    position: absolute;
+    color: #ffffff;
+    float: left;
+    font-size: 16pt;
+    font-weight: bold;
+
 }
 
-.ddz_2 image{
+.ddz_2 img{
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 .ddz_2 p{

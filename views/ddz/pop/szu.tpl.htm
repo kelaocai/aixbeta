@@ -15,36 +15,47 @@
 
     <title><?php echo $this->page_title; ?></title>
 </head>
-<body style="margin: 0px;">
+<body style="margin: 0px;background-color: #FA5B38; text-align: center">
 
 
 <div class="swiper-container" style="width: 100%; font-family:'Microsoft YaHei','STHeiti', Helvetica, Arial, sans-serif; text-align: center">
     <div class="swiper-wrapper" >
         <!--First Slide-->
-        <!--<div class="swiper-slide" style="background-color: #3D3E40;">-->
-
-            <!--&lt;!&ndash;<script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz/20141211010540/loader.js"&ndash;&gt;-->
-                    <!--&lt;!&ndash;id="Mugeda_5481e565a3664eb605000116"></script>&ndash;&gt;-->
-
-        <!--</div>-->
+        <div class="swiper-slide" >
+            <script>
+                var _mrmcp = {
+                    "redirect_url": "%LINK%?redir=",
+                    "impression_pixel": "%TRACKURL%",
+                    "destination_url": "%DESTURL%",
+                    "custom_params":"%CUSTOMPARAM%",
+                    "common_path":"",
+                    "description":"",
+                    "thumb":"",
+                    "render_mode":"normal"
+                };
+            </script>
+            <script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz_2/20141212022936/loader.js" id="Mugeda_5489e134a3664eca05000656"></script>        </div>
 
         <!--Second Slide-->
-        <div class="swiper-slide" style="background-color:#FFC700; color:#fff;">
 
-            <img src="<?php echo G_STATIC_URL; ?>/img/mai.png" class="img img-responsive">
+        <div class="swiper-slide ddz_2" style="background-color:#00B9AB;" >
 
+            <img src="<?php echo G_STATIC_URL; ?>/img/fanli.png" class="img img-responsive" width="320px;">
+            <div class="ddz-txt">
+                没错，因为卖家设置了返利
+            </div>
 
         </div>
 
-        <!--Third Slide-->
-        <div class="swiper-slide">
-            3
-            <!--<script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz-p2/20141211010935/loader.js" id="Mugeda_5487c377a3664ee105000522"></script>-->
-        </div>
+        <div class="swiper-slide ddz_2" style="background-color:#FFC700;" >
 
-        <div class="swiper-slide">
-            4
-            <!--<script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz-pg4/20141211011016/loader.js" id="Mugeda_54886102a3664ebc0500060c"></script>-->
+            <img src="<?php echo G_STATIC_URL; ?>/img/mai.png" class="img img-responsive" width="320px;">
+
+            <div class="ddz-txt">
+                访问点点折网 三步拿返利<br>
+                <small style="font-size: 12px; font-weight: normal">请用PC端浏览器访问 diandianzhe.com</small>
+            </div>
+
         </div>
 
 
@@ -66,16 +77,6 @@
             //etc..
         });
 
-        var _mrmcp = {
-            "redirect_url": "%LINK%?redir=",
-            "impression_pixel": "%TRACKURL%",
-            "destination_url": "%DESTURL%",
-            "custom_params": "%CUSTOMPARAM%",
-            "common_path": "",
-            "description": "",
-            "thumb": "",
-            "render_mode": "normal"
-        };
 
 //        alert(window.screen.height);
 
