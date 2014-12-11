@@ -135,13 +135,18 @@
 }
 
 .ddz_2{
-    float: left;
     margin: 0px auto;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
+    /*position: absolute;*/
+}
+
+.ddz_2 image{
+    margin: 0 auto;
 }
 
 .ddz_2 p{
    padding: 0px;
    margin: 0px;
    line-height: 24px;
+
 }
