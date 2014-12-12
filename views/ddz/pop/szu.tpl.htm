@@ -11,45 +11,45 @@
     <link rel="stylesheet" href="<?php echo G_STATIC_URL; ?>/css/ddz/szu.css">
     <script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/idangerous.swiper.js"></script>
-
+    <script type="text/javascript" charset="utf-8"
+            src="http://animate.adobe.com/runtime/5.0.1/edge.5.0.1.min.js"></script>
 
     <title><?php echo $this->page_title; ?></title>
 </head>
 <body style="margin: 0px;background-color: #FA5B38; text-align: center">
 
 
-<div class="swiper-container" style="width: 100%; font-family:'Microsoft YaHei','STHeiti', Helvetica, Arial, sans-serif; text-align: center">
-    <div class="swiper-wrapper" >
+<div class="swiper-container"
+     style="width: 100%; font-family:'Microsoft YaHei','STHeiti', Helvetica, Arial, sans-serif; text-align: center">
+    <div class="swiper-wrapper">
         <!--First Slide-->
-        <!--<div class="swiper-slide" >-->
-            <!--<script>-->
-                <!--var _mrmcp = {-->
-                    <!--"redirect_url": "%LINK%?redir=",-->
-                    <!--"impression_pixel": "%TRACKURL%",-->
-                    <!--"destination_url": "%DESTURL%",-->
-                    <!--"custom_params":"%CUSTOMPARAM%",-->
-                    <!--"common_path":"",-->
-                    <!--"description":"",-->
-                    <!--"thumb":"",-->
-                    <!--"render_mode":"normal"-->
-                <!--};-->
-            <!--</script>-->
-            <!--<script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz_2/20141212022936/loader.js" id="Mugeda_5489e134a3664eca05000656"></script>        -->
-        <!--</div>-->
 
 
-        <!--Second Slide-->
+        <div class="swiper-slide ddz_2" style="background-color:#00B9AB;">
 
-        <div class="swiper-slide ddz_2" style="background-color:#00B9AB;" >
+            <div id="Stage" class="EDGE-217536339">
+
+                <div id="Stage_Ellipse" class="edgeLoad-EDGE-217536339"></div>
+                <div id="Stage_Symbol_1" class="edgeLoad-EDGE-217536339">
+                    <div id="Stage_Symbol_1_Rectangle"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="swiper-slide ddz_2" style="background-color:#00B9AB;">
 
             <img src="<?php echo G_STATIC_URL; ?>/img/fanli.png" class="element-animation" width="320px;">
+
             <div class="ddz-txt ">
                 没错，卖家设置了返利，最高50%
             </div>
 
         </div>
 
-        <div class="swiper-slide ddz_2" style="background-color:#FFC700;" >
+        <div class="swiper-slide ddz_2" style="background-color:#FFC700;">
 
             <img src="<?php echo G_STATIC_URL; ?>/img/mai.png" class="img img-responsive" width="320px;">
 
@@ -77,15 +77,24 @@
             //Your options here:
             mode: 'vertical',
             loop: false,
-            onTouchEnd:function(sw){
+            onTouchEnd: function (sw) {
 
-                 $('img').eq(sw.activeIndex-1).removeClass('element-animation');
-                 $('img').eq(sw.activeIndex).addClass('element-animation');
+                $('img').eq(sw.activeIndex - 1).removeClass('element-animation');
+                $('img').eq(sw.activeIndex).addClass('element-animation');
 //               alert(sw.activeIndex);
             }
 
             //etc..
         });
+
+        AdobeEdge.loadComposition('static/js/ddz', 'EDGE-217536339', {
+            scaleToFit: "none",
+            centerStage: "none",
+            minW: "0",
+            maxW: "undefined",
+            width: "550px",
+            height: "400px"
+        }, {"dom": {}}, {"dom": {}});
 
 
 //        alert(window.screen.height);
