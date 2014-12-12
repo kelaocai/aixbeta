@@ -21,27 +21,29 @@
 <div class="swiper-container" style="width: 100%; font-family:'Microsoft YaHei','STHeiti', Helvetica, Arial, sans-serif; text-align: center">
     <div class="swiper-wrapper" >
         <!--First Slide-->
-        <div class="swiper-slide" >
-            <script>
-                var _mrmcp = {
-                    "redirect_url": "%LINK%?redir=",
-                    "impression_pixel": "%TRACKURL%",
-                    "destination_url": "%DESTURL%",
-                    "custom_params":"%CUSTOMPARAM%",
-                    "common_path":"",
-                    "description":"",
-                    "thumb":"",
-                    "render_mode":"normal"
-                };
-            </script>
-            <script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz_2/20141212022936/loader.js" id="Mugeda_5489e134a3664eca05000656"></script>        </div>
+        <!--<div class="swiper-slide" >-->
+            <!--<script>-->
+                <!--var _mrmcp = {-->
+                    <!--"redirect_url": "%LINK%?redir=",-->
+                    <!--"impression_pixel": "%TRACKURL%",-->
+                    <!--"destination_url": "%DESTURL%",-->
+                    <!--"custom_params":"%CUSTOMPARAM%",-->
+                    <!--"common_path":"",-->
+                    <!--"description":"",-->
+                    <!--"thumb":"",-->
+                    <!--"render_mode":"normal"-->
+                <!--};-->
+            <!--</script>-->
+            <!--<script src="http://file-cn.mugeda.com/ads/campaigns/54802561a3664ebb05000003/ddz_2/20141212022936/loader.js" id="Mugeda_5489e134a3664eca05000656"></script>        -->
+        <!--</div>-->
+
 
         <!--Second Slide-->
 
         <div class="swiper-slide ddz_2" style="background-color:#00B9AB;" >
 
-            <img src="<?php echo G_STATIC_URL; ?>/img/fanli.png" class="img img-responsive" width="320px;">
-            <div class="ddz-txt">
+            <img src="<?php echo G_STATIC_URL; ?>/img/fanli.png" class="element-animation" width="320px;">
+            <div class="ddz-txt ">
                 没错，卖家设置了返利，最高50%
             </div>
 
@@ -74,7 +76,14 @@
         var mySwiper = $('.swiper-container').swiper({
             //Your options here:
             mode: 'vertical',
-            loop: true
+            loop: false,
+            onTouchEnd:function(sw){
+
+                 $('img').eq(sw.activeIndex-1).removeClass('element-animation');
+                 $('img').eq(sw.activeIndex).addClass('element-animation');
+//               alert(sw.activeIndex);
+            }
+
             //etc..
         });
 
