@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo G_STATIC_URL; ?>/css/ddz/szu.css">
     <script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/idangerous.swiper.js"></script>
+    <script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/layer/layer.min.js"></script>
     <title><?php echo $this->page_title; ?></title>
 </head>
 <body style="margin: 0px;background-color: #FA5B38; text-align: center">
@@ -92,7 +93,14 @@
                      class="img img-responsive " style="margin-top: 50px;" >
 
                 <p style="color: #FBC733;font-size:14px; margin-top: 20px;">获得100集分宝返利！提到支付宝当钱花</p>
-                <p style="margin-top: 20px;"><a class="btn btn-success btn-lg" >马上领取</a></p>
+                <p>
+                <div class="input-group input-group-lg" style="padding: 10px;">
+                    <span class="input-group-addon" style="font-size: 12px;">支付宝账号</span>
+                    <input type="text" class="form-control" placeholder="邮箱地址/手机号码">
+                </div>
+
+                </p>
+                <p style="margin-top: 20px;"><a class="btn btn-success btn-lg" href="javascript:;" onclick="input_alipay()">马上领取</a></p>
             </div>
 
 
@@ -139,12 +147,22 @@
         });
 
 
-//        alert(window.screen.height);
-
-
-//        $('.swiper-slide').height(window.screen.height/2);
-
     });
+
+    function input_alipay(){
+//        var p = $.layer({
+//            type: 1,   //0-4的选择,
+//            title: false,
+//            border: [0],
+//            closeBtn: [0],
+//            shadeClose: true,
+//            area: ['460px', '280px'],
+//            page: {
+//                html: '<\div style="width:460px; height:280px; background-color:#F22E2D; color:#fff;"><\div style="padding:20px;">PC访问点点折 http://diandianzhe.com<br> 网站左上角【用户中心】查看返利到账情况<br><br><br><br><img src="static/img/ddzlogo.png" width="160px;"><\/div><\/div>' //此处放了防止html被解析，用了\转义，实际使用时可去掉
+//            }
+//        });
+        layer.alert('成功领取!<br>PC端访问点点折，查看到账明细<br>http://diandianzhe.com', 1);
+    }
 
 
 </script>
