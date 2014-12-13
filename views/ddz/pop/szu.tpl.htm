@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="<?php echo G_STATIC_URL; ?>/css/ddz/szu.css">
     <script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo G_STATIC_URL; ?>/js/idangerous.swiper.js"></script>
-    <script type="text/javascript" charset="utf-8"
-            src="http://animate.adobe.com/runtime/5.0.1/edge.5.0.1.min.js"></script>
-
     <title><?php echo $this->page_title; ?></title>
 </head>
 <body style="margin: 0px;background-color: #FA5B38; text-align: center">
@@ -25,39 +22,81 @@
         <!--First Slide-->
 
 
-        <div class="swiper-slide ddz_2" style="background-color:#00B9AB;">
+        <div class="swiper-slide " style="background-color:#F22E2D;">
 
-            <div id="Stage" class="EDGE-217536339">
 
-                <div id="Stage_Ellipse" class="edgeLoad-EDGE-217536339"></div>
-                <div id="Stage_Symbol_1" class="edgeLoad-EDGE-217536339">
-                    <div id="Stage_Symbol_1_Rectangle"></div>
-                </div>
+            <div style="padding: 20px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-1-01.png"
+                     class="img img-responsive">
             </div>
+            <div style="padding: 0px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/money.png"
+                     class="img img-responsive ea_0" style="margin-left: 150px;" id="ddz_ea_0">
+            </div>
+
+            <div style="padding: 20px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-1-02.png" class="img img-responsive">
+            </div>
+
 
         </div>
 
 
+        <div class="swiper-slide " style="background-color:#35ADD5;">
 
-        <div class="swiper-slide ddz_2" style="background-color:#00B9AB;">
 
-            <img src="<?php echo G_STATIC_URL; ?>/img/fanli.png" class="element-animation" width="320px;">
+            <div style="padding: 20px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-2-02.png"
+                     class="img img-responsive">
+            </div>
 
-            <div class="ddz-txt ">
-                没错，卖家设置了返利，最高50%
+            <div style="padding: 20px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-2-03.png"
+                     class="img img-responsive " style="margin-left: 80px;margin-top: -150px;" id="ddz_ea_1">
+            </div>
+            <div style="padding: 0px 20px;margin-top: -30px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-2-01.png" class="img img-responsive">
             </div>
 
         </div>
 
-        <div class="swiper-slide ddz_2" style="background-color:#FFC700;">
+        <div class="swiper-slide " style="background-color:#FBC733;">
 
-            <img src="<?php echo G_STATIC_URL; ?>/img/mai.png" class="img img-responsive" width="320px;">
-
-            <div class="ddz-txt">
-                上点点折网 搜海量返利商品<br>
-                <small style="font-size: 12px; font-weight: normal">淘宝、天猫，京东、1号店、唯品会等600家商城<br></small>
-                <small style="font-size: 12px; font-weight: normal">请用PC端浏览器访问 diandianzhe.com</small>
+            <div style="padding:10px 0px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-3-01.png" class="img img-responsive" style="max-width: 320px">
             </div>
+            <div style="padding: 0px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-3-02.png"
+                     class="img img-responsive " style="margin-left: 54px;margin-top:-340px;;" id="ddz_ea_2">
+            </div>
+
+            <div style="padding:20px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-3-04.png" class="img img-responsive" >
+            </div>
+
+            <small style="color: #ffffff"> 淘宝 天猫 1号店 京东 唯品会 苏宁 当当 易迅 亚马逊...</small>
+
+
+        </div>
+
+        <div class="swiper-slide " style="background-color:#F22E2D;">
+
+            <div style="padding: 20px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/cash-02.png"
+                     class="img img-responsive" id="ddz_ea_3">
+            </div>
+
+
+            <div style="padding: 0px;">
+                <img src="<?php echo G_STATIC_URL; ?>/img/ddz-3-03.png"
+                     class="img img-responsive " style="margin-top: 50px;" >
+
+                <p style="color: #FBC733;font-size:14px; margin-top: 20px;">获得100集分宝返利！提到支付宝当钱花</p>
+                <p style="margin-top: 20px;"><a class="btn btn-success btn-lg" >马上领取</a></p>
+            </div>
+
+
+
 
         </div>
 
@@ -68,10 +107,15 @@
 
 <script type="text/javascript">
 
-
+    $('.swiper-container').height(document.documentElement.clientHeight);
     $(document).ready(function () {
 
-        $('.swiper-container').height(document.documentElement.clientHeight);
+//        alert(document.documentElement.clientHeight);
+//        alert(document.body.clientHeight);
+
+
+//        $('.slide-img-main').height(document.body.clientHeight*0.3);
+
 
         var mySwiper = $('.swiper-container').swiper({
             //Your options here:
@@ -79,22 +123,20 @@
             loop: false,
             onTouchEnd: function (sw) {
 
-                $('img').eq(sw.activeIndex - 1).removeClass('element-animation');
-                $('img').eq(sw.activeIndex).addClass('element-animation');
-//               alert(sw.activeIndex);
+                if (sw.activeIndex > 0) {
+                    $('#ddz_ea_' + (sw.activeIndex - 1)).removeClass('ea_' + (sw.activeIndex - 1));
+                    $('#ddz_ea_' + (sw.activeIndex + 1)).removeClass('ea_' + (sw.activeIndex + 1));
+
+                } else {
+                    $('#ddz_ea_' + (sw.activeIndex + 1)).removeClass('ea_' + (sw.activeIndex + 1));
+                }
+
+                $('#ddz_ea_' + sw.activeIndex).addClass('ea_' + sw.activeIndex);
+
+
             }
 
-            //etc..
         });
-
-        AdobeEdge.loadComposition('static/js/ddz', 'EDGE-217536339', {
-            scaleToFit: "none",
-            centerStage: "none",
-            minW: "0",
-            maxW: "undefined",
-            width: "550px",
-            height: "400px"
-        }, {"dom": {}}, {"dom": {}});
 
 
 //        alert(window.screen.height);
