@@ -32,7 +32,10 @@ class main extends AWS_CONTROLLER
 
     public function index_action()
     {
+        $scence_id=$_GET['scenceId'];
 
+        echo('$scence_id='.$scence_id);
+        die;
 
         TPL::output('pop/szu');
     }
@@ -41,31 +44,21 @@ class main extends AWS_CONTROLLER
     {
         require_once("system/alipay/alipay_submit.class.php");
         require_once('system/HttpClient.class.php');
-
-        $alipay_config['key'] = '';
         $key = '6E73E4BA89BA4F58A65BF644D69CA6E2';
-        $par = array('alipayId' => 'test@111.com', 'spm' => 'a.szu.dm', 'source' => 'dm', 'ts' => time());
-        $alipaySubmit = new AlipaySubmit($alipay_config);
-
-//        echo $alipaySubmit->buildRequestPara($par);
-
-        $par_link=createLinkstring($par);
+        $par = array('alipayId' => 'bbk@163.com', 'spm' => 'a.szu.dm', 'source' => 'weixin.dm', 'ts' => time());
+        $sort_par=argSort($par);
+        $par_link=createLinkstring($sort_par);
         $token=md5Sign($par_link,$key);
-        //echo $par_link.'&token='.$token;
+        $pageContents = HttpClient::quickPost('http://test.diandianzhe.com/zhe/remote/api/reg_account_ajax.htm',$par_link.'&_token='.$token);
+        echo $pageContents;
+       //echo "http://test.diandianzhe.com/zhe/remote/api/reg_account_ajax.htm?".$par_link.'&_token='.$token;
 
+    }
 
-
-       //$pageContents = HttpClient::quickPost('http://test.diandianzhe.com/zhe/remote/api/reg_account_ajax.htm',$par_link.'&_token='.$token);
-
-
-        header("Content-type:application/json");
-
-        //echo $pageContents;
-       echo "http://test.diandianzhe.com/zhe/remote/api/reg_account_ajax.htm?".$par_link.'&_token='.$token;
-
-
-
-
+    public function mn_action(){
+        $json='{"json":{"code":"success","success":true}}';
+        $data=json_decode($json,true);
+        echo($data['json']['code']);
     }
 
 
