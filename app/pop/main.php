@@ -34,9 +34,6 @@ class main extends AWS_CONTROLLER
     {
         $scence_id=$_GET['scenceId'];
 
-        echo('$scence_id='.$scence_id);
-        die;
-
         TPL::output('pop/szu');
     }
 
