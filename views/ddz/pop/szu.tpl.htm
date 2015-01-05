@@ -96,7 +96,7 @@
                 <p>
                 <div class="input-group input-group-lg" style="padding: 10px;">
                     <span class="input-group-addon" style="font-size: 12px;">支付宝账号</span>
-                    <input type="text" class="form-control" placeholder="邮箱地址/手机号码">
+                    <input type="text" class="form-control" placeholder="邮箱地址/手机号码" id="alipayid">
                 </div>
 
                 </p>
@@ -150,18 +150,20 @@
     });
 
     function input_alipay(){
-//        var p = $.layer({
-//            type: 1,   //0-4的选择,
-//            title: false,
-//            border: [0],
-//            closeBtn: [0],
-//            shadeClose: true,
-//            area: ['460px', '280px'],
-//            page: {
-//                html: '<\div style="width:460px; height:280px; background-color:#F22E2D; color:#fff;"><\div style="padding:20px;">PC访问点点折 http://diandianzhe.com<br> 网站左上角【用户中心】查看返利到账情况<br><br><br><br><img src="static/img/ddzlogo.png" width="160px;"><\/div><\/div>' //此处放了防止html被解析，用了\转义，实际使用时可去掉
-//            }
-//        });
-        layer.alert('成功领取!<br>PC端访问点点折，查看到账明细<br>http://diandianzhe.com', 1);
+        var loadi;
+        alipay_id = $('#alipayid').val();
+//        alert(alipay_id);
+        loadi = layer.load('正在发送…');
+        $.post("?/pop/submit/",
+                {
+                    alipayid: alipay_id
+                },
+                function (data, status) {
+                    layer.close(loadi);
+                    layer.alert('成功领取!<br>PC端访问点点折，查看到账明细<br>http://diandianzhe.com', 1);
+                });
+
+
     }
 
 
