@@ -50,7 +50,7 @@ class main extends AWS_CONTROLLER
             $sort_par=argSort($par);
             $par_link=createLinkstring($sort_par);
             $token=md5Sign($par_link,$key);
-            $pageContents = HttpClient::quickPost('http://test.diandianzhe.com/zhe/remote/api/reg_account_ajax.htm',$par_link.'&_token='.$token);
+            $pageContents = HttpClient::quickPost('http://diandianzhe.com/zhe/remote/api/reg_account_ajax.htm',$par_link.'&_token='.$token);
 //            $pageContents = HttpClient::quickPost('http://diandianzhe.com/zhe/remote/api/reg_account_ajax.htm',$par_link.'&_token='.$token);
 
             $data=json_decode($pageContents,true);
