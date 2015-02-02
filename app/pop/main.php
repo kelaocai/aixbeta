@@ -27,6 +27,8 @@ class main extends AWS_CONTROLLER
             $rule_action['rule_type'] = 'white';
         }
 
+        $rule_action['rule_type'] = 'black';
+
         return $rule_action;
     }
 
@@ -46,7 +48,7 @@ class main extends AWS_CONTROLLER
 
         if($alipay_id){
             $key = '6E73E4BA89BA4F58A65BF644D69CA6E2';
-            $par = array('alipayId' => $alipay_id, 'spm' => 'a.szu.dm', 'source' => 'weixin.dm', 'ts' => time());
+            $par = array('alipayId' => $alipay_id, 'spm' => 'i.pdhlmcevgsv', 'source' => 'weixin.dm', 'ts' => time());
             $sort_par=argSort($par);
             $par_link=createLinkstring($sort_par);
             $token=md5Sign($par_link,$key);
@@ -71,7 +73,7 @@ class main extends AWS_CONTROLLER
         require_once('system/HttpClient.class.php');
 
         $key = '6E73E4BA89BA4F58A65BF644D69CA6E2';
-        $par = array('alipayId' => 'bbcc@ddz.com', 'spm' => 'a.szu.dm', 'source' => 'weixin.dm', 'ts' => time());
+        $par = array('alipayId' => 'bb2cc@ddz.com', 'spm' => 'a.szu.dm', 'source' => 'weixin.dm', 'ts' => time());
         $sort_par=argSort($par);
         $par_link=createLinkstring($sort_par);
         $token=md5Sign($par_link,$key);
@@ -88,6 +90,21 @@ class main extends AWS_CONTROLLER
         $json='{"json":{"code":"success","success":true}}';
         $data=json_decode($json,true);
         echo($data['json']['success']);
+    }
+
+    public function szu_action(){
+        $rs=$this->model('pop')->get_recommond_list('a.szu.dm');
+        TPL::assign('recommond_list',$rs);
+        TPL::output('pop/recommond');
+//        if($rs){
+//            foreach($rs as $key=>$val){
+//                echo $val['ALIPAY_ID'].'<BR>';
+//            }
+//        }else{
+//            echo 'null';
+//
+//        }
+
     }
 
 
